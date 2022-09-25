@@ -24,6 +24,15 @@ while (executar)
             Console.WriteLine("A soma dos dois números é: " + resultado);
             break;
 
+        case 3:
+            Console.WriteLine("Digite os números que deseja subtrair (máximo 2)");
+            Console.Write("Número 1: ");
+            numero1 = int.Parse(Console.ReadLine());
+            Console.Write("Número 2: ");
+            numero2 = int.Parse(Console.ReadLine());
+            resultado = Subtrair(numero1, numero2);
+            Console.WriteLine("A subtração dos dois números é: " + resultado);
+            break;
         case 4:
             executar = false;
             break;
@@ -43,4 +52,9 @@ static int Adicionar(int numero1, int numero2)
     return resultado;
 }
 
+static int Subtrair(int numero1, int numero2)
+{
+    int resultado = numero1 - numero2;
+    return resultado;
+}
 
